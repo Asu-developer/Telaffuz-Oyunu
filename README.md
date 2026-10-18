@@ -1,0 +1,2 @@
+# Telaffuz-Oyunu
+Python Project
