@@ -1,17 +1,17 @@
 ### 🎮 Telaffuz Oyunu (Pronunciation Game)
 
-Bu proje, kullanıcıların Türkçe kelimeleri doğru ve akıcı bir şekilde telaffuz etmesini eğlenceli bir oyun mekaniğiyle test eden, **Python** tabanlı bir geliştirme projesidir. Ses tanıma ve yapay zeka entegrasyonları ile konuşma pratiği yapmayı kolaylaştırır. 
+Bu proje, kullanıcıların Türkçe kelimeleri doğru ve akıcı bir şekilde telaffuz etmesini eğlenceli bir oyun mekaniğiyle test eden, **Python** ve **Streamlit** tabanlı interaktif bir web uygulamasıdır. Ses tanıma teknolojilerini kullanarak konuşma pratiği yapmayı keyifli hale getirir. 
 
 ### ✨ Özellikler
 
-* **Ses Tanıma:** Kullanıcının mikrofonundan aldığı ses sinyallerini metne dönüştürür.
-* **Akıllı Doğrulama:** Ekranda gösterilen kelime veya cümle ile kullanıcının telaffuzunu karşılaştırır ve doğruluk skoru üretir.
-* **Farklı Çalışma Modları:** Hem terminal tabanlı (main.py) hem de web/arayüz tabanlı (app.py) kullanım esnekliği sunar.
-* **Eğlenceli Öğrenme:** Çocuklar, dil öğrenenler veya diksiyonunu geliştirmek isteyenler için interaktif oyunlaştırma prensipleri içerir.
+* **Modern Web Arayüzü:** Streamlit ile geliştirilmiş, kullanıcı dostu ve hızlı yanıt veren sade arayüz.
+* **Ses Tanıma (Speech Recognition):** Mikrofon yardımıyla kullanıcının sesini anlık olarak algılar ve metne dönüştürür.
+* **Akıllı Doğrulama:** Ekranda hedef olarak gösterilen kelime/cümle ile kullanıcının telaffuzunu eşleştirerek doğruluk skoru hesaplar.
+* **Eğlenceli Öğrenme:** Çocuklar, dil öğrenenler veya diksiyonunu geliştirmek isteyen herkes için harika bir interaktif pratik aracıdır.
 
-### 🚀 Kurulum
+### 🚀 Kurulum ve Çalıştırma
 
-Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edebilirsiniz: 
+Uygulamayı yerel bilgisayarınızda ayağa kaldırmak için aşağıdaki adımları sırasıyla uygulayabilirsiniz: 
 
 ### 1. Depoyu Klonlayın
 
@@ -22,9 +22,9 @@ cd Telaffuz-Oyunu
 
 Use code with caution.
 
-### 2. Gerekli Kütüphaneleri Yükleyin
+### 2. Bağımlılıkları Yükleyin
 
-Projede ses işleme ve arayüz elementleri için gerekli Python paketlerini yükleyin: 
+Projenin çalışması için gerekli kütüphaneleri (Streamlit, ses tanıma paketleri vb.) yükleyin: 
 
 bash
 
@@ -32,48 +32,36 @@ pip install -r requirements.txt
 
 Use code with caution.
 
-*(Eğer requirements.txt henüz mevcut değilse, projenizde kullandığınız SpeechRecognition, pyaudio veya arayüz kütüphanelerini tek tek kurabilirsiniz).* 
+*(Eğer kütüphaneler bilgisayarınızda henüz yüklü değilse, manuel olarak pip install streamlit speechrecognition komutunu da kullanabilirsiniz).* 
 
-### 🕹️ Nasıl Çalıştırılır?
+### 3. Uygulamayı Başlatın
 
-Projenizde iki ana giriş noktası bulunmaktadır: 
-
-### Mod 1: Terminal / Konsol Üzerinden Çalıştırma
-
-Temel oyun mantığını konsol üzerinden deneyimlemek için: 
+Web sitesini yerel sunucunuzda çalıştırmak için terminale şu komutu yazın: 
 
 bash
 
-python main.py
+py -m streamlit run app.py
 
 Use code with caution.
 
-### Mod 2: Arayüz / Uygulama Üzerinden Çalıştırma
-
-Geliştirilmiş görsel arayüzü başlatmak için: 
-
-bash
-
-python app.py
-
-Use code with caution.
+Komutu çalıştırdıktan sonra tarayıcınızda otomatik olarak http://localhost:8501 adresi açılacaktır. 
 
 ### 🛠️ Kullanılan Teknolojiler
 
-* **Dil:** Python 3.x
-* **Ses İşleme:** SpeechRecognition / PyAudio
-* **Arayüz (Opsiyonel):** Projenin app.py içeriğine göre (Tkinter / Flask / Streamlit)
+* **Geliştirme Dili:** Python 3.x
+* **Web Çerçevesi (Framework):** Streamlit
+* **Ses İşleme:** SpeechRecognition / PyAudio (veya ilgili kütüphaneler)
 
 ### 🤝 Katkıda Bulunma
 
-Katkı sağlamak isterseniz lütfen bir **Fork** oluşturun ve ardından bir **Pull Request** gönderin. Her türlü hata bildirimi ve özellik önerisi projenin gelişimi için değerlidir! 
+Projeyi geliştirmeye yardımcı olmak ister misiniz? Her türlü hata bildirimi, iyileştirme ve yeni özellik önerisi için bir **Pull Request** açabilir veya **Issue** oluşturabilirsiniz. 
 
-1. Bu depoyu fork'layın (https://github.com/Asu-developer/Telaffuz-Oyunu/fork)
-2. Özellik dalınızı oluşturun (git checkout -b yeni-ozellik)
-3. Değişikliklerinizi commit edin (git commit -am 'Yeni özellik eklendi')
+1. Projeyi fork'layın (https://github.com/Asu-developer/Telaffuz-Oyunu/fork)
+2. Yeni bir özellik dalı açın (git checkout -b yeni-ozellik)
+3. Değişikliklerinizi kaydedin (git commit -am 'Yeni özellik eklendi')
 4. Dalınızı push edin (git push origin yeni-ozellik)
-5. Bir Pull Request oluşturun
+5. Pull Request gönderin
 
 ### 📄 Lisans
 
-Bu proje **MIT Lisansı** altında lisanslanmıştır. Detaylar için LICENSE dosyasına göz atabilirsiniz.
+Bu proje **MIT Lisansı** altında korunmaktadır. Daha fazla bilgi için LICENSE dosyasına göz atabilirsiniz.
